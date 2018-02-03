@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog"
+    android:layout_height="200dp">
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:text="延迟拆开红包"
+        android:textSize="18sp"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@null"
+        android:progressBackgroundTint="@android:color/darker_gray"
+         />
+    <TextView
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/black"
+        android:text="延迟几秒"
+        android:id="@+id/text_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">小手一抖</string>
+    <string name="start_service">服务已开启</string>
+    <string name="start">开启</string>
+    <string name="close">关闭</string>
+    <string name="end_service">服务未开启</string>
+    <string name="dialog_title">使用说明</string>
+    <string name="dialog_content">使用此红包助手，需要手动开启服务才能生效，如不开启服务将无法使用此助手的抢红包功能
+    (注: 不同手机不同系统可能服务设置存在的地方不一样，请自行查找位置进行打开,一般为无障碍服务</string>
+    <string name="button_posit">确定</string>
+    <string name="button_negat">取消</string>
+    <string name="delay">延时拆开红包</string>
+    <string name="pingbi">屏蔽红包文字</string>
+    <string name="hongbao_helper">红包助手</string>
+    <string name="about">关于</string>
+    <string name="github"> 点个赞吧！</string>
+    <string name="web">github</string>
+    <string name="load_url">https://github.com/NextOneDay/LuckyMoney</string>
+</resources>
