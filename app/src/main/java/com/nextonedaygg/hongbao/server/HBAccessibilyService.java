@@ -241,7 +241,7 @@ public class HBAccessibilyService extends AccessibilityService {
                 return false;
 
             /* Check the user's exclude words list. */
-            String[] excludeWordsArray = excludeWords.split(" +");
+            String[] excludeWordsArray = excludeWords.split(";");
             for (String word : excludeWordsArray) {
                 if (word.length() > 0 && hongbaoContent.contains(word)) return false;
             }
