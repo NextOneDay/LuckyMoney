@@ -1,19 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        nextoneday {
-            keyAlias 'next'
-            keyPassword '1094797360'
-            storeFile file('C:/Users/nextonedaygg/nextoneday.jks')
-            storePassword '1094797360'
 
-//            storeFile file("C:/Users/nextonedaygg/nextoneday.jks")
-//            storePassword project.hasProperty("KEYSTORE_PASS") ? KEYSTORE_PASS : System.getenv("KEYSTORE_PASS")
-//            keyAlias project.hasProperty("ALIAS_NAME") ? ALIAS_NAME : System.getenv("ALIAS_NAME")
-//            keyPassword project.hasProperty("ALIAS_PASS") ? ALIAS_PASS : System.getenv("ALIAS_PASS")
-        }
-    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.nextonedaygg.hongbao"
