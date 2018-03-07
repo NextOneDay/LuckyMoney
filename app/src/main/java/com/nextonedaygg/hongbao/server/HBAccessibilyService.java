@@ -32,7 +32,7 @@ public class HBAccessibilyService extends AccessibilityService {
     private Handler mHandler;
     private boolean isReceivingHongbao = true; // 是否有红包
     private ArrayList<Integer> mList;
-
+    private boolean notify=false;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
@@ -41,6 +41,10 @@ public class HBAccessibilyService extends AccessibilityService {
 //        if ("xxx.xxx.xxx".equals(pkgName)) // 在这里做包名过滤
         int eventType = event.getEventType();
         Log.d(TAG, eventType + "::");
+        if(notify){
+            //在通知栏哪里设置不进去
+            return;
+        }
         switch (eventType) {
             //第一步：监听通知栏消息
             case AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED:

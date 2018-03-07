@@ -4,11 +4,14 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Vibrator;
 import android.provider.Settings;
 
 import android.support.v4.app.NotificationCompat;
@@ -21,6 +24,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -95,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements AccessibilityMana
         mDelay.setOnClickListener(this);
         mPingbi.setOnClickListener(this);
         mAbout.setOnClickListener(this);
+
     }
 
     private void SetStatus() {
@@ -147,7 +152,13 @@ public class MainActivity extends AppCompatActivity implements AccessibilityMana
         Toast.makeText(this, "红包服务启动：" + b, Toast.LENGTH_SHORT).show();
         sendNotify(b);
     }
+    private BroadcastReceiver receiver_onclick = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
 
+        }
+    };
+    public static final String ONCLICK = "com.app.onclick";
     /**
     在这里开个通知栏
      * @param b
@@ -159,6 +170,20 @@ public class MainActivity extends AppCompatActivity implements AccessibilityMana
         notify.setSmallIcon(R.drawable.logo);
         if(b){
             notify.setContentText("红包服务开启");
+//            RemoteViews view=new RemoteViews(getPackageName(), R.layout.notify_view);
+//            view.setTextViewText(R.id.tv_title, "服务开启通知");
+//            view.setTextViewText(R.id.tv_content, "服务开启通知");
+//            view.setImageViewResource(R.id.img_icon, R.drawable.logo);
+
+//            IntentFilter filter_click = new IntentFilter();
+//            filter_click.addAction(ONCLICK);
+//            registerReceiver(
+// , filter_click);
+//            Intent Intent_pre = new Intent(ONCLICK);
+//            PendingIntent pendIntent_click = PendingIntent.getBroadcast(this, 0, Intent_pre, 0);
+//            view.setOnClickPendingIntent(R.id.img_icon,pendIntent_click);
+
+//            notify.setContent(view);
             notify.setOngoing(true);
             Intent accessibleIntent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
             PendingIntent pendingIntent = PendingIntent.getActivities(this, 0, new Intent[]{accessibleIntent} ,0);
