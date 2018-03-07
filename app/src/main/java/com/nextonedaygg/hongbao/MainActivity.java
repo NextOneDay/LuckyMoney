@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements AccessibilityMana
         mDelay.setOnClickListener(this);
         mPingbi.setOnClickListener(this);
         mAbout.setOnClickListener(this);
-
     }
 
     private void SetStatus() {
